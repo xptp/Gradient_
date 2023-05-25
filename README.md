@@ -13,5 +13,9 @@ actors agensy
 создание админа 
 * python manage.py createsuperuser
 
-* актёры доступны по эндпоинту api/actors
+* все актёры доступны по эндпоинту api/actors
+* доступ к актёру по id api/actors/id
 * админка admin/
+* UPDATE:
+* актёры(только мужчины) api/male доступ так же по id api/male/id
+* актрисы api/female  api/female/id
