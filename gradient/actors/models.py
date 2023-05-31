@@ -1,4 +1,5 @@
 from django.db import models
+from embed_video.fields import EmbedVideoField
 
 
 class ActorImage(models.Model):
@@ -46,9 +47,11 @@ class Actor(models.Model):
     roles = models.TextField(verbose_name='Роли в кино')
     skills = models.TextField(verbose_name='Навыки')
     main_image = models.ImageField(verbose_name='Главное фото')
-    images = models.ManyToManyField(ActorImage, related_name='Фото',
+    images = models.ManyToManyField(ActorImage, blank=True,
+                                    related_name='photos',
                                     verbose_name='Фото')
-    enable = models.BooleanField(verbose_name='Активен?')
+    video = EmbedVideoField(blank=True, verbose_name='Визитка')
+    enable = models.BooleanField(verbose_name='Активен?', blank=True)
 
     class Meta:
         verbose_name = 'Актёр'
