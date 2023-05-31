@@ -8,7 +8,7 @@ class ActorsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Actor
-        fields = ('name', 'last_name', 'age', 'main_image')
+        fields = ('id', 'name', 'last_name', 'age', 'main_image')
 
 
 class ActorsDetailSerializer(serializers.ModelSerializer):
@@ -19,5 +19,5 @@ class ActorsDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'last_name', 'age', 'town',
                   'height', 'body', 'hair_col', 'eyes_col',
                   'person', 'education', 'language',
-                  'roles', 'skills', 'main_image', 'images')
+                  'roles', 'skills', 'main_image', 'images', 'video')
         depth = 1
