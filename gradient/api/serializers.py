@@ -19,6 +19,7 @@ class ActorsDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'last_name', 'age', 'town',
                   'height', 'body', 'hair_col', 'eyes_col',
                   'person', 'education', 'language',
-                  'roles', 'skills', 'main_image', 'images', 'video',
+                  'roles', 'roles_teatre', 'skills', 'main_image', 'images',
+                  'video',
                   'shoe', 'dress', 'measurement', )
         depth = 1
