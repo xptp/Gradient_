@@ -39,8 +39,14 @@
 }
 
 .drop-btn {
+  // background: rgb(0, 255, 26);
+  // border: 1px solid white;
   font-size: 30px;
-  width: 100%;
+  // width: 100%;
+  // position: relative;
+  // left: 95px;
+  border-radius: 14px;
+  padding: 2px 1px 2px 8px;
   box-sizing: border-box;
   margin-bottom: 5px;
 }
@@ -48,12 +54,17 @@
 .drop-btn:hover {
   color: white;
 }
+.arrow {
+  position: relative;
+  top: 4px;
+}
 
 .drop-contet {
+  vertical-align: middle;
   position: relative;
   text-align: left;
   line-height: 30px;
-  left: 100px;
+  // left: 100px;
   font-size: 20px;
 
   &.hide {
@@ -69,6 +80,7 @@
   }
 }
 .drop-margin {
+  // text-align: left;
   margin-bottom: 30px;
 }
 .drop-end {
