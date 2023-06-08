@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { VscAdd } from "react-icons/vsc";
+import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
+// import { BiSolidDownArrow } from "react-icons/bi";
 
 const MoreStats = ({ roles, skills, language }) => {
   const [role, setRole] = useState("hide");
@@ -40,7 +41,12 @@ const MoreStats = ({ roles, skills, language }) => {
         <div className="info-div">
           <div className="drop-margin ">
             <button className="drop-btn dark" onClick={switchRoles}>
-              Роли в кино {<VscAdd />}
+              Роли в кино{" "}
+              {role === "hide" ? (
+                <VscTriangleDown className="arrow" />
+              ) : (
+                <VscTriangleUp className="arrow" />
+              )}
             </button>
             <div className={` drop-contet ${role}`}>
               {newRoles.map((r, index) => {
@@ -55,7 +61,12 @@ const MoreStats = ({ roles, skills, language }) => {
 
           <div className="drop-margin">
             <button className="drop-btn dark" onClick={switchSkills}>
-              Умения и навыки {<VscAdd />}
+              Умения и навыки{" "}
+              {skill === "hide" ? (
+                <VscTriangleDown className="arrow" />
+              ) : (
+                <VscTriangleUp className="arrow" />
+              )}
             </button>
             <div className={`drop-contet drop-skills ${skill}`}>
               {newSkills.map((s, index) => {
@@ -70,7 +81,12 @@ const MoreStats = ({ roles, skills, language }) => {
 
           <div className="drop-margin drop-end">
             <button className="drop-btn  dark" onClick={switchLanguages}>
-              Знание языков {<VscAdd />}
+              Знание языков{" "}
+              {languag === "hide" ? (
+                <VscTriangleDown className="arrow" />
+              ) : (
+                <VscTriangleUp className="arrow" />
+              )}
             </button>
             <div className={`drop-contet drop-language ${languag}`}>
               {newLanguages.map((l, index) => {
