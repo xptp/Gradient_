@@ -1,0 +1,44 @@
+.name-box {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 480px;
+  left: 60px;
+  line-height: 50px;
+  text-align: left;
+  max-width: 297px;
+  opacity: 0;
+}
+
+.name-age {
+  font-size: 15px;
+}
+
+.box-photo {
+  background-size: contain;
+  height: 540px;
+  width: 360px;
+  border-radius: 2px;
+
+  margin: 40px;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.box-photo:hover {
+  filter: grayscale(0);
+  .name-box {
+    top: 390px;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}
+
+.img-name-holder {
+  display: flex;
+  flex-wrap: wrap;
+  display: inline;
+}
+
+.container-actor {
+  width: 100px;
+}
