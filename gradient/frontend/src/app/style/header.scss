@@ -1,0 +1,30 @@
+.header {
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.head-name {
+  margin: 2px 0 15px 0;
+}
+
+.box {
+  display: inline-block;
+  position: relative;
+}
+.logo {
+  height: 110px;
+}
+.info {
+  position: absolute;
+  // display: flex;
+  padding-top: 10px;
+  color: #7e7a79;
+  right: 60px;
+  top: 20px;
+  font-size: 18px;
+  line-height: 12px;
+
+  @media (max-width: 784px) {
+    position: static;
+  }
+}

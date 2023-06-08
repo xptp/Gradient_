@@ -130,3 +130,8 @@ dmypy.json
 
 # .idea
 .idea
+
+# front
+gradient/media
+act.ps1
+mig.ps1
