@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 
 from actors.models import Actor, ActorImage
+
 
 @admin.register(Actor)
 class ActorAdmin(admin.ModelAdmin):
@@ -10,11 +12,24 @@ class ActorAdmin(admin.ModelAdmin):
                             'town', 'height', 'body', 'hair_col',
                             'eyes_col', 'person', 'education', 'language',
                             'roles', 'skills', 'main_image', 'images',
-                            'video', 'enable')}),
+                            'video', 'enable', 'prewiew')}),
      )
+    readonly_fields = ['prewiew']
+
+    def prewiew(self, obj):
+        return mark_safe(f'<img src="{obj.main_image.url}">')
+
     filter_horizontal = ('images',)
     ordering = ('last_name',)
     search_fields = ('last_name', 'name',)
 
 
-admin.site.register(ActorImage)
+@admin.register(ActorImage)
+class ActorImageAdmin(admin.ModelAdmin):
+    readonly_fields = ['prewiew']
+
+    def prewiew(self, obj):
+        return mark_safe(f'<img src="{obj.images.url}">')
+
+    class Meta:
+        model = ActorImage
