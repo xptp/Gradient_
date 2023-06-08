@@ -2,11 +2,11 @@ import React from "react";
 
 const ActorStats = ({ actor }) => {
   const stats = {
-    Возраст: "age",
-    Рост: "height",
-    Телосложение: "body",
-    "Цвет волос": "hair_col",
-    "Цвет глаз": "eyes_col",
+    "Возраст:": "age",
+    "Рост:": "height",
+    "Телосложение:": "body",
+    "Цвет волос:": "hair_col",
+    "Цвет глаз:": "eyes_col",
   };
 
   function getStatList() {

@@ -10,22 +10,34 @@
 .contact-img {
   height: 500px;
   position: relative;
-  right: 30px;
+  right: 6px;
   // box-shadow: 5px 5px 5px 5px black;
 }
 .contants {
+  letter-spacing: 2px;
   position: relative;
-  left: 30px;
+  left: 50px;
   top: 15px;
   text-align: left;
   margin: 10px 0 5px 0;
 }
 .div-contants {
   position: relative;
+  font-size: 25px;
   display: inline-block;
 }
 
 .div-name {
   margin-bottom: 30px;
-  font-size: 27px;
+  font-size: 42px;
+}
+.div-tg {
+  width: 209.5px;
+  border-bottom: 1px solid #fff;
+}
+
+.div-tg:hover {
+  transition: 0.3s;
+  color: rgb(196 55 33);
+  border-bottom: 1px solid rgb(196 55 33);
 }
