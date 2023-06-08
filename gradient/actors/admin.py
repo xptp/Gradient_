@@ -11,9 +11,9 @@ class ActorAdmin(admin.ModelAdmin):
          (None, {'fields': ('name', 'last_name', 'male', 'age',
                             'town', 'height', 'body', 'hair_col',
                             'eyes_col', 'person', 'education', 'language',
-                            'roles', 'skills', 'main_image', 'images',
-                            'video', 'prewiew', 'shoe', 'dress', 'measurement',
-                            'enable')}),
+                            'roles', 'roles_teatre', 'skills', 'main_image',
+                            'images', 'video', 'prewiew', 'shoe',
+                            'dress', 'measurement', 'enable')}),
      )
     readonly_fields = ['prewiew']
 

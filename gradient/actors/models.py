@@ -45,6 +45,7 @@ class Actor(models.Model):
     education = models.TextField(verbose_name='Образование')
     language = models.TextField(verbose_name='Языки')
     roles = models.TextField(verbose_name='Роли в кино')
+    roles_teatre = models.TextField(verbose_name='Роли в театре')
     skills = models.TextField(verbose_name='Навыки')
     main_image = models.ImageField(verbose_name='Главное фото',
                                    upload_to='main_photo')
