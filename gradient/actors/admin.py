@@ -12,7 +12,8 @@ class ActorAdmin(admin.ModelAdmin):
                             'town', 'height', 'body', 'hair_col',
                             'eyes_col', 'person', 'education', 'language',
                             'roles', 'skills', 'main_image', 'images',
-                            'video', 'enable', 'prewiew')}),
+                            'video', 'prewiew', 'shoe', 'dress', 'measurement',
+                            'enable')}),
      )
     readonly_fields = ['prewiew']
 
@@ -27,6 +28,8 @@ class ActorAdmin(admin.ModelAdmin):
 @admin.register(ActorImage)
 class ActorImageAdmin(admin.ModelAdmin):
     readonly_fields = ['prewiew']
+    ordering = ('last_name',)
+    search_fields = ('last_name',)
 
     def prewiew(self, obj):
         return mark_safe(f'<img src="{obj.images.url}">')
