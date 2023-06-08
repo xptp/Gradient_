@@ -1,0 +1,35 @@
+.footer {
+  margin-top: 300px;
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+.footer-box {
+  display: inline-block;
+}
+.info-item {
+  margin-bottom: 2px;
+}
+.img-footer {
+  position: absolute;
+  border-radius: 50%;
+  height: 110px;
+
+  left: 5px;
+  bottom: 50px;
+}
+
+.info-footer {
+  text-align: left;
+  left: 130px;
+  bottom: 90px;
+  position: absolute;
+}
+
+.sinema {
+  position: relative;
+  font-size: 14px solid;
+  line-height: 20px;
+  top: 45px;
+  color: rgb(188, 188, 188);
+}
