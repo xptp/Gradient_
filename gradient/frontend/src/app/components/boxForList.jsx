@@ -10,7 +10,7 @@ const ActorBox = ({ obj }) => {
       return "Актриса";
     }
   }
-  console.log(obj);
+  // console.log(obj);
   return (
     <Link to={`/actor/${obj.id}`}>
       <div

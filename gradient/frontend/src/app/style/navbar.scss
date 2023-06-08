@@ -5,9 +5,12 @@
 .li-nav {
   display: inline;
   color: #7e7a79;
-  font-size: 22px;
+  font-size: 34px;
   margin: 0 70px;
+  letter-spacing: 3.5px;
 }
+
 .li-nav:hover {
-  color: rgb(233, 233, 233);
+  transition: 0.3s;
+  color: rgb(250, 250, 250);
 }

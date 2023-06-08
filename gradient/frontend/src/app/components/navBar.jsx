@@ -9,7 +9,7 @@ const NavBar = () => {
           <Link to="">Актеры агенства</Link>
         </li>
         <li className="li-nav">
-          <Link to="actors">Мужщины</Link>
+          <Link to="actors">Мужчины</Link>
         </li>
         <li className="li-nav">
           <Link to="actress">Женщины</Link>

@@ -25,7 +25,7 @@ const ContactsPage = () => {
         </div>
         <div className="contants div-tg">
           <a href="https://t.me/tg_ggrom" target="blank">
-            telegram @tg_ggrom
+            telegram: @tg_ggrom
           </a>
         </div>
       </div>
