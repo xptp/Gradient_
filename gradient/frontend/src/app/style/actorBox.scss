@@ -9,7 +9,7 @@
   // -webkit-text-stroke: 1px;
   // -webkit-text-stroke-color: black;
   letter-spacing: 2px;
-
+  // transition: 0.3s;
   text-align: left;
   max-width: 300px;
   opacity: 0;
@@ -27,14 +27,14 @@
 
   margin: 40px;
   filter: grayscale(1);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .box-photo:hover {
   filter: grayscale(0);
   .name-box {
     top: 390px;
     line-height: 50px;
-    transition: 0.5s;
+    transition: 0.3s;
     opacity: 1;
     // text-shadow: 3px #000000;
     text-shadow: 1px 1px 2px rgb(8, 8, 8), 0 0 1em rgb(0, 0, 0),

@@ -22,7 +22,7 @@ def download_zip(request, pk):
             x = str(image.images).replace('/', os.sep)
             with open(f'{settings.BASE_DIR}\media\{x}', 'rb') as image_file:
                 f = image_file.read()
-                zf.writestr(f'{image.last_name}.png', f)
+                zf.writestr(f'{image.last_name}_{image.id}.png', f)
 
         response['Content-Disposition'] = f'attachment; filename={Actor.last_name}.zip'
         return response
