@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
 // import { BiSolidDownArrow } from "react-icons/bi";
 
-const MoreStats = ({ roles, skills, language }) => {
+const MoreStats = ({ roles, skills, language, teatre }) => {
   const [role, setRole] = useState("hide");
+  const [teatreRoles, setTeatreRoles] = useState("hide");
   const [skill, setSkill] = useState("hide");
   const [languag, setLanguag] = useState("hide");
 
@@ -15,6 +16,16 @@ const MoreStats = ({ roles, skills, language }) => {
       setRole("hide");
     }
   }
+
+  function switchTeatreRoles() {
+    if (teatreRoles === "hide") {
+      setTeatreRoles("show");
+    }
+    if (teatreRoles === "show") {
+      setTeatreRoles("hide");
+    }
+  }
+
   function switchSkills() {
     if (skill === "hide") {
       setSkill("show");
@@ -23,6 +34,7 @@ const MoreStats = ({ roles, skills, language }) => {
       setSkill("hide");
     }
   }
+
   function switchLanguages() {
     if (languag === "hide") {
       setLanguag("show");
@@ -33,6 +45,7 @@ const MoreStats = ({ roles, skills, language }) => {
   }
 
   let newRoles = new String(roles).split("\r\n");
+  let newRolesTeatre = new String(teatre).split("\r\n");
   let newSkills = new String(skills).split("\r\n");
   let newLanguages = new String(language).split("\r\n");
   return (
@@ -53,6 +66,29 @@ const MoreStats = ({ roles, skills, language }) => {
                 return (
                   <div className={`drop-contet drop-role ${role} `} key={index}>
                     {r}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="drop-margin ">
+            <button className="drop-btn dark" onClick={switchTeatreRoles}>
+              Роли в театре{" "}
+              {teatreRoles === "hide" ? (
+                <VscTriangleDown className="arrow" />
+              ) : (
+                <VscTriangleUp className="arrow" />
+              )}
+            </button>
+            <div className={` drop-contet ${teatreRoles}`}>
+              {newRolesTeatre.map((rt, index) => {
+                return (
+                  <div
+                    className={`drop-contet drop-role ${teatreRoles} `}
+                    key={index}
+                  >
+                    {rt}
                   </div>
                 );
               })}

@@ -132,7 +132,8 @@ dmypy.json
 .idea
 
 # front
-gradient/media
+gradient/media/photos
+gradient/media/main_photo
 act.ps1
 mig.ps1
 
