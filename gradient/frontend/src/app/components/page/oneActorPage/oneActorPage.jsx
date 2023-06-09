@@ -71,6 +71,7 @@ const OneActorPage = () => {
               roles={actor.roles}
               skills={actor.skills}
               language={actor.language}
+              teatre={actor.roles_teatre}
             />
           </div>
           {images ? (
