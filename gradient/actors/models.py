@@ -40,6 +40,7 @@ class Actor(models.Model):
     height = models.IntegerField(verbose_name='Рост')
     body = models.CharField(max_length=30, verbose_name='Телосложение')
     hair_col = models.CharField(max_length=30, verbose_name='Цвет волос')
+    hair_long = models.CharField(max_length=30, verbose_name='Длина волос')
     eyes_col = models.CharField(max_length=30, verbose_name='Цвет глаз')
     person = models.CharField(max_length=30, verbose_name='Внешность')
     education = models.TextField(verbose_name='Образование')
