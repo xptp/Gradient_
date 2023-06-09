@@ -42,6 +42,10 @@ const OneActorPage = () => {
   }, [actor]);
   console.log(actor);
 
+  async function donloadZip() {
+    await PostService.getImagesZip(id, actor.last_name);
+  }
+
   return (
     <>
       {actor ? (
@@ -74,6 +78,11 @@ const OneActorPage = () => {
               teatre={actor.roles_teatre}
             />
           </div>
+
+          <button className="download-btn dark" onClick={donloadZip}>
+            Загрузить все фото
+          </button>
+
           {images ? (
             <div className="main-img-container">
               {/* <Modal active={modalActive} setActive={setModalActive}> */}
