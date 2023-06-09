@@ -28,7 +28,9 @@ class ActorsViewSet(viewsets.ModelViewSet):
             images=ActorImage.objects.get(id=actor['images'])
             )
         new_actor.save()
+        print(f'{new_actor.images}')
         serializer = ActorsSerializer(new_actor)
+        print(f'{new_actor.images}')
         return Response(serializer.data)
 
 
