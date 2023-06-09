@@ -20,6 +20,6 @@ class ActorsDetailSerializer(serializers.ModelSerializer):
                   'height', 'body', 'hair_col', 'eyes_col',
                   'person', 'education', 'language',
                   'roles', 'roles_teatre', 'skills', 'main_image', 'images',
-                  'video',
+                  'video', 'hair_long',
                   'shoe', 'dress', 'measurement', )
         depth = 1
