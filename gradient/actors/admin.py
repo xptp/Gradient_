@@ -6,7 +6,7 @@ from actors.models import Actor, ActorImage
 
 @admin.register(Actor)
 class ActorAdmin(admin.ModelAdmin):
-
+    """Актёр"""
     fieldsets = (
          (None, {'fields': ('name', 'last_name', 'male', 'age',
                             'town', 'height', 'body', 'hair_col', 'hair_long',

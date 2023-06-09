@@ -55,12 +55,15 @@ class Actor(models.Model):
                                     verbose_name='Фото')
     video = EmbedVideoField(blank=True, verbose_name='Визитка')
     shoe = models.IntegerField(verbose_name='Размер обуви(необязательно)',
-                               blank=True)
+                               blank=True,
+                               null=True)
     dress = models.IntegerField(verbose_name='Размер одежды(необязательно)',
-                                blank=True)
+                                blank=True,
+                                null=True)
     measurement = models.CharField(max_length=30,
                                    verbose_name='Мерки(необязательно)',
-                                   blank=True)
+                                   blank=True,
+                                   null=True)
     enable = models.BooleanField(verbose_name='Активен?', blank=True)
 
     class Meta:

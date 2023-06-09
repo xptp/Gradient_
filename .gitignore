@@ -135,3 +135,9 @@ dmypy.json
 gradient/media
 act.ps1
 mig.ps1
+
+# backend
+gradient/sqldiff.exe
+gradient/sqlite3_analyzer.exe
+gradient/sqlite3.exe
+
