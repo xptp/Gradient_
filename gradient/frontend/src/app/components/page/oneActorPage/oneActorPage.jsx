@@ -89,7 +89,7 @@ const OneActorPage = () => {
               {/* {Fade(images)} */}
               {images.map((i) => {
                 return (
-                  <Link to={i.images.url} key={i.id} target="blank">
+                  <Link to={i.images} key={i.id} target="blank">
                     <img
                       // onClick={() => setModalActive(true)}
                       key={i.id}
