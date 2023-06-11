@@ -36,7 +36,7 @@ const HomePage = () => {
             return (
               <div className="actor-kase" key={index}>
                 {a.map((aa) => {
-                  return <ActorBox obj={aa} key={aa.id} />;
+                  return <>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</>;
                 })}
               </div>
             );
