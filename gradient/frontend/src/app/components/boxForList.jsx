@@ -11,7 +11,7 @@ const ActorBox = ({ obj }) => {
     }
   }
   return (
-    <Link to={`/actor/${obj.id}`}>
+    <Link to={`/actor/${obj.url}`}>
       <div
         style={{
           backgroundImage: `url(${String(obj.main_image)})`,

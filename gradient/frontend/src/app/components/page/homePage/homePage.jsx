@@ -4,8 +4,8 @@ import PostService from "../../../API/PostService";
 import { ThreeDots } from "react-loader-spinner";
 import { motion } from "framer-motion";
 import { listSort } from "../../utils/sort";
-import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+// import Carousel from "react-material-ui-carousel";
+// import { Paper, Button } from "@mui/material";
 
 const HomePage = () => {
   const [actors, setActors] = useState();

@@ -12,12 +12,24 @@ import { ThreeDots } from "react-loader-spinner";
 
 const OneActorPage = () => {
   const [actor, setActor] = useState();
+  const [id, setId] = useState();
   const [images, setImages] = useState(null);
   const [loader, setLoader] = useState(false);
   // const [modalActive, setModalActive] = useState(true);
-  const { id } = useParams();
+  const { actorUrl } = useParams();
 
-  async function fetchActor() {
+  async function fetchActorsList() {
+    const a = await PostService.getAllActors();
+    for (let i in a) {
+      if (a[i].url === actorUrl) {
+        fetchActor(a[i].id);
+        setId(a[i].id);
+        break;
+      }
+    }
+  }
+
+  async function fetchActor(id) {
     try {
       const a = await PostService.getById(id);
       setActor(a);
@@ -32,7 +44,7 @@ const OneActorPage = () => {
   }
 
   useEffect(() => {
-    fetchActor();
+    fetchActorsList();
   }, []);
 
   useEffect(() => {
