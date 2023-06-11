@@ -33,6 +33,8 @@ class Actor(models.Model):
         verbose_name='Фамилия',
         max_length=40
     )
+    url = models.SlugField(max_length=255, unique=True, db_index=True,
+                           verbose_name='URL')
     male = models.TextField(max_length=1, verbose_name='Пол',
                             choices=SexSelector.choices)
     age = models.IntegerField(verbose_name='Возраст')
