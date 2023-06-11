@@ -33,7 +33,9 @@ const ActressPage = () => {
             return (
               <div className="actor-kase" key={index}>
                 {a.map((aa) => {
-                  return <>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</>;
+                  return (
+                    <>{aa.enable ? <ActorBox obj={aa} key={aa.id} /> : null}</>
+                  );
                 })}
               </div>
             );
