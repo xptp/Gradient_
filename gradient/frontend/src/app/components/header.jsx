@@ -1,8 +1,7 @@
 import React from "react";
 import "../style/header.scss";
-// import { baseUrl } from "../global.json";
+
 const Header = () => {
-  // console.log(baseUrl);
   return (
     <div className="header">
       <img
