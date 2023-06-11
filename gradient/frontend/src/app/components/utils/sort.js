@@ -4,7 +4,6 @@ export function listSort(list) {
   let bb = [];
   for (let i in list) {
     list[i]["agetype"] = validator(list[i].age);
-    // console.log(list[i]);
     if (bb.length === 3) {
       aa.push(bb);
       bb = [];
