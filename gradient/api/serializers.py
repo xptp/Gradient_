@@ -9,7 +9,7 @@ class ActorsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actor
         fields = ('id', 'url', 'name', 'last_name',
-                  'male', 'age', 'main_image')
+                  'male', 'age', 'main_image', 'enable')
 
 
 class ActorsDetailSerializer(serializers.ModelSerializer):
