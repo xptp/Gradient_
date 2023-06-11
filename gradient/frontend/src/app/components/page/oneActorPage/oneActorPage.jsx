@@ -40,7 +40,6 @@ const OneActorPage = () => {
       setImages(actor.images);
     }
   }, [actor]);
-  console.log(actor);
 
   async function donloadZip() {
     await PostService.getImagesZip(id, actor.last_name);
