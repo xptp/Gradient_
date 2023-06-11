@@ -18,7 +18,7 @@ const PostService = {
   },
   getById: async (id) => {
     const data = await axios.get(`${host}/api/actors/${id}`);
-    console.log(dataJson.host);
+    // console.log(dataJson.host);
     return data.data;
   },
   getImagesZip: async (id, name) => {

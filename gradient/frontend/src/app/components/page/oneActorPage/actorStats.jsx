@@ -18,6 +18,9 @@ const ActorStats = ({ actor }) => {
   function getStatList() {
     let statList = [];
     for (let i in stats) {
+      if (i === "Рост:" && String(actor[stats[i]]).indexOf("см") === -1) {
+        actor[stats[i]] = `${actor[stats[i]]} см`;
+      }
       statList.push(
         <div key={i} className="stats-item">
           {i} {actor[stats[i]]}
